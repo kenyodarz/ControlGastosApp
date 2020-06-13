@@ -1,0 +1,24 @@
+button {
+  margin-right: 0.25em;
+  
+}
+.ui-splitbutton {
+  margin-left: 0.25em;
+}
+.ui-splitbutton button {
+  margin-right: 0;
+}
+::ng-deep body .ui-menu {
+  width: auto;
+}
+.ui-widget {
+  font-family: Norwester, "Norwester", sans-serif;
+  font-size: 16pt;
+  color: #ffffff;
+}
+
+span {
+  font-family: Norwester, "Norwester", sans-serif;
+  font-size: 14pt;
+  color: #ffffff;
+}
