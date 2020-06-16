@@ -55,21 +55,41 @@ export class ReporteComponent implements OnInit {
   generarPDF() {
     let documento = document.getElementById('id');
     let opciones = {
-      margin: [0.5, 0, 0.5, 0],
+      margin: [0.5, 0, 1, 0.5],
       filename: 'GVSC-' + this.selectedInforme.idInforme + '.pdf',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
+      // html2canvas: { scale: 2 },
       jsPDF: {
         unit: 'cm',
         format: 'letter',
         orientation: 'portrait',
       },
     };
-
-    // New Promise-based usage:
-    html2pdf().from(documento).set(opciones).save();
     // Old monolithic-style usage:
     // html2pdf(documento, opciones);
+    // New Promise-based usage:
+    // html2pdf().from(documento).set(opciones).save();
+    html2pdf()
+      .from(documento)
+      .set(opciones)
+      .toPdf()
+      .get('pdf')
+      .then(function (pdf) {
+        // Colocamos en el Pie de Pagina # de la pagina
+        var totalPages = pdf.internal.getNumberOfPages();
+        for (let index = 0; index < totalPages; index++) {
+          pdf.setPage(index);
+          pdf.setFontSize(10);
+          pdf.setTextColor(0);
+          console.log(totalPages - index);
+          pdf.text(
+            'Pagina ' + (totalPages - index) + ' de ' + totalPages,
+            pdf.internal.pageSize.getWidth() - 12,
+            pdf.internal.pageSize.getHeight() - 0.5
+          );
+        }
+      })
+      .save();
   }
 
   obtenerDesembolsos() {

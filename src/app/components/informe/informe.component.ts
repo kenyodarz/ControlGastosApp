@@ -19,7 +19,7 @@ import { Proyecto } from 'src/app/models/Proyecto';
 @Component({
   selector: 'app-informe',
   templateUrl: './informe.component.html',
-  styleUrls: ['./informe.component.scss'],
+  styleUrls: ['./informe.component.css'],
 })
 export class InformeComponent implements OnInit {
   newInforme: boolean;
