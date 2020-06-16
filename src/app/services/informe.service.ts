@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
 // Modelo
 import { Informe } from 'src/app/models/Informe';
 
-// const API_URL: string = 'http://app.cdmservicios.com/gbackend/api/informe/';
-const API_URL: string = 'http://localhost:8090/api/informe/';
+const API_URL: string = 'http://192.168.10.5/gbackend/api/informe/';
+// const API_URL: string = 'http://localhost:8090/api/informe/';
 
 @Injectable({
   providedIn: 'root',
