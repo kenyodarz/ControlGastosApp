@@ -72,6 +72,7 @@
       </ng-template>
       <ng-template pTemplate="summary">
         <div style="text-align: left;">
+          <!-- Errores Marcados por TSLint -->
           Registro Seleccionado:
           {{
             selectedRegistro
@@ -79,13 +80,22 @@
                 " - " +
                 selectedRegistro.cantidad +
                 " - " +
-                selectedRegistro.users
+                selectedRegistro.users['name']
               : "Ninguno"
           }}
         </div>
       </ng-template>
     </p-table>
   </p-panel>
+  <!-- 
+    **************************************************************************************
+    **************************************************************************************
+    **************************************************************************************
+    ***********************Side Bar - Edicion y Creacion de Desembolsos*******************
+    **************************************************************************************
+    **************************************************************************************
+    ************************************************************************************** 
+  -->
   <p-sidebar
     [(visible)]="displaySaveEditDialog"
     position="right"
@@ -130,7 +140,6 @@
           <div class="ui-g-9">
             <p-calendar
               dataType="string"
-              [(ngModel)]="date1"
               dateFormat="yy-mm-dd"
               readonlyInput="true"
               [locale]="es"
@@ -155,7 +164,6 @@
           <div class="ui-g-9">
             <p-dropdown
               [options]="descriptions"
-              [(ngModel)]="selectedDescription"
               optionLabel="nombre"
               placeholder="Seleccione Un Tipo Descripcion"
               id="description"
@@ -212,7 +220,6 @@
           <div class="ui-g-9">
             <p-dropdown
               [options]="usuarios"
-              [(ngModel)]="selectedUsuario"
               optionLabel="name"
               placeholder="Seleccione Un Usuario"
               id="users"

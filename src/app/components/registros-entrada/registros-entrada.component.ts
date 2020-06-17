@@ -3,11 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Validators, FormBuilder } from '@angular/forms';
 // PrimeNG
-import { MessageService, ConfirmationService, SelectItem } from 'primeng/api';
+import { MessageService, ConfirmationService} from 'primeng/api';
 import { MenuItem } from 'primeng/api';
 // Servicios
-import { AuthService } from 'src/app/services/auth.service';
-import { TokenStorageService } from 'src/app/services/token-storage.service';
 import { DescriptionService } from 'src/app/services/description.service';
 import { RegistroService } from 'src/app/services/registro.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
@@ -55,7 +53,6 @@ export class RegistrosEntradaComponent implements OnInit {
   selectedProyecto: Proyecto;
 
   constructor(
-    private authService: AuthService,
     private fb: FormBuilder,
     private confirmationService: ConfirmationService,
     private messageService: MessageService,
@@ -161,7 +158,7 @@ export class RegistrosEntradaComponent implements OnInit {
   }
 
   guardarRegistro() {
-    this.formRegistro.patchValue({ users: this.selectedUsuario });
+    // this.formRegistro.patchValue({ users: this.selectedUsuario });
     // console.log(this.formRegistro.value);
     this.registro = this.formRegistro.value;
     this.registroService.save(this.registro).subscribe(
@@ -197,32 +194,31 @@ export class RegistrosEntradaComponent implements OnInit {
         this.selectedRegistro != null &&
         this.selectedRegistro.idRegistro != null
       ) {
-        // this.formRegistro.patchValue({
-        //   idRegistroSalida: this.selectedRegistro.idRegistro,
-        // });
-        this.formRegistro.patchValue({
-          observaciones: this.selectedRegistro.observaciones,
-        });
-        this.formRegistro.patchValue({
-          description: this.selectedRegistro.description,
-        });
-        this.formRegistro.patchValue({
-          fecha: this.selectedRegistro.fecha,
-        });
-        this.formRegistro.patchValue({
-          cantidad: this.selectedRegistro.cantidad,
-        });
-        this.formRegistro.patchValue({
-          tipo: this.selectedRegistro.tipo,
-        });
-        this.formRegistro.patchValue({
-          idRegistro: this.selectedRegistro.idRegistro,
-        });
-        let index = this.usuarios.findIndex(
-          (e) => e.id == this.selectedRegistro.users.id
-        );
-        this.selectedUsuario = this.usuarios[index];
-      } else {
+          // this.formRegistro.patchValue({
+          //   idRegistroSalida: this.selectedRegistro.idRegistro,
+          // });
+          this.formRegistro.patchValue({
+            observaciones: this.selectedRegistro.observaciones,
+          });
+          this.formRegistro.patchValue({
+            description: this.selectedRegistro.description,
+          });
+          this.formRegistro.patchValue({
+            fecha: this.selectedRegistro.fecha,
+          });
+          this.formRegistro.patchValue({
+            cantidad: this.selectedRegistro.cantidad,
+          });
+          this.formRegistro.patchValue({
+            tipo: this.selectedRegistro.tipo,
+          });
+          this.formRegistro.patchValue({
+            idRegistro: this.selectedRegistro.idRegistro,
+          });
+          this.formRegistro.patchValue({
+            users: this.selectedRegistro.users,
+          });
+        } else {
         this.messageService.add({
           severity: 'warn',
           summary: '¡¡¡Advertencia!!!',

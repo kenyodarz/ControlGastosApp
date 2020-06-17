@@ -19,6 +19,7 @@ button {
 
 span {
   font-family: Norwester, "Norwester", sans-serif;
-  font-size: 14pt;
-  color: #ffffff;
+  font-size: 16pt;
+  align-self: start;
+  color: #000000;
 }

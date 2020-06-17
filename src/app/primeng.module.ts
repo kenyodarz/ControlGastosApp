@@ -11,34 +11,34 @@ import { CalendarModule } from 'primeng/calendar';
 import { ToastModule } from 'primeng/toast';
 import { TableModule } from 'primeng/table';
 import { PasswordModule } from 'primeng/password';
-import { ToggleButtonModule } from 'primeng/togglebutton';
-import { InputMaskModule } from 'primeng/inputmask';
-import { TabMenuModule } from 'primeng/tabmenu';
+// import { ToggleButtonModule } from 'primeng/togglebutton';
+// import { InputMaskModule } from 'primeng/inputmask';
+// import { TabMenuModule } from 'primeng/tabmenu';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { PaginatorModule } from 'primeng/paginator';
-import { ChartModule } from 'primeng/chart';
-import { CardModule } from 'primeng/card';
+// import { ChartModule } from 'primeng/chart';
+// import { CardModule } from 'primeng/card';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ToolbarModule } from 'primeng/toolbar';
-import { SplitButtonModule } from 'primeng/splitbutton';
-import { TabViewModule } from 'primeng/tabview';
-import { CodeHighlighterModule } from 'primeng/codehighlighter';
-import { CheckboxModule } from 'primeng/checkbox';
+// import { SplitButtonModule } from 'primeng/splitbutton';
+// import { TabViewModule } from 'primeng/tabview';
+// import { CodeHighlighterModule } from 'primeng/codehighlighter';
+// import { CheckboxModule } from 'primeng/checkbox';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { SidebarModule } from 'primeng/sidebar';
-import { TreeTableModule } from 'primeng/treetable';
+// import { TreeTableModule } from 'primeng/treetable';
 import { DropdownModule } from 'primeng/dropdown';
-import { InputTextareaModule } from 'primeng/inputtextarea';
+// import { InputTextareaModule } from 'primeng/inputtextarea';
 import { MenuModule } from 'primeng/menu';
 import { TooltipModule } from 'primeng/tooltip';
 
 const myModule = [
   MessagesModule,
   ToolbarModule,
-  SplitButtonModule,
-  TabViewModule,
-  CodeHighlighterModule,
+  // SplitButtonModule,
+  // TabViewModule,
+  // CodeHighlighterModule,
   MessageModule,
   PanelModule,
   MenubarModule,
@@ -49,19 +49,19 @@ const myModule = [
   ToastModule,
   TableModule,
   PasswordModule,
-  ToggleButtonModule,
-  InputMaskModule,
-  TabMenuModule,
+  // ToggleButtonModule,
+  // InputMaskModule,
+  // TabMenuModule,
   ConfirmDialogModule,
   PaginatorModule,
-  ChartModule,
-  CardModule,
-  CheckboxModule,
+  // ChartModule,
+  // CardModule,
+  // CheckboxModule,
   MultiSelectModule,
   SidebarModule,
-  TreeTableModule,
+  // TreeTableModule,
   DropdownModule,
-  InputTextareaModule,
+  // InputTextareaModule,
   MenuModule,
   TooltipModule,
 ];

@@ -65,7 +65,7 @@ export class ProyectoComponent implements OnInit {
           // Cuando Son Iguales Retornamos 0
           return 0;
         });
-        console.log(this.proyectos);
+        // console.log(this.proyectos);
       },
       (error) => {
         console.log(error);
