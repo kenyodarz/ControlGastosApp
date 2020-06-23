@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 /* Modelo */
 import { Saldo } from 'src/app/models/Saldo';
 
-const API_URL: string = 'http://app.cdmservicios.com/gbackend/api/saldo/';
+const API_URL: string = 'http://152.200.130.126/gbackend/api/saldo/';
 // const API_URL: string = 'http://localhost:8090/api/saldo/';
 
 @Injectable({

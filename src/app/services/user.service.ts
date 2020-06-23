@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 
-const API_URL = 'http://app.cdmservicios.com/gbackend/api/test/';
+const API_URL = 'http://152.200.130.126/gbackend/api/test/';
 
 
 /**

@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 
 
 // Contante que lleva la URL de la API_REST
-const AUTH_API: string = 'http://app.cdmservicios.com/gbackend/api/auth/';
+const AUTH_API: string = 'http://152.200.130.126/gbackend/api/auth/';
 // const AUTH_API: string = "http://localhost:8090/api/auth/";
 // Contante que nos permite enviar los datos como JSON usando HttpHeaders
 const httpOptions = {
