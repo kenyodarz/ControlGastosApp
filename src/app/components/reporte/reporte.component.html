@@ -44,6 +44,12 @@
           label="Generar PDF"
           *ngIf="selectedInforme"
         ></p-button>
+        <p-button
+          icon="pi pi-file-excel"
+          (click)="exportExcel()"
+          label="Generar Excel"
+          *ngIf="selectedInforme"
+        ></p-button>
       </p-footer>
     </p-panel>
     <br />
