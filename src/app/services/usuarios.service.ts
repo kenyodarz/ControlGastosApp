@@ -5,9 +5,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 // Modelo
 import { User } from 'src/app/models/user';
+/** Variable de Entorno */
+import { environment } from 'src/environments/environment';
 
-const API_URL: string = 'http://app.cdmservicios.com/gbackend/api/user/';
-// const API_URL: string = 'http://localhost:8090/api/user/';
+const API_URL: string = `${environment.API_URL}/user/`;
 
 @Injectable({
   providedIn: 'root',

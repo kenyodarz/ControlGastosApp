@@ -1,9 +1,10 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+/** Variable de Entorno */
+import { environment } from 'src/environments/environment';
 
-
-const API_URL = 'http://152.200.130.126/gbackend/api/test/';
+const API_URL: string = `${environment.API_URL}/test/`;
 
 
 /**

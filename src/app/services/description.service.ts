@@ -5,9 +5,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 // Modelo
 import { Description } from 'src/app/models/description';
+/** Variable de Entorno */
+import { environment } from 'src/environments/environment';
 
-const API_URL: string = 'http://152.200.130.126/gbackend/api/description/';
-// const API_URL: string = 'http://localhost:8090/api/description/';
+const API_URL: string = `${environment.API_URL}/description/`;
 
 @Injectable({
   providedIn: 'root',

@@ -5,9 +5,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 /* Modelo */
 import { RegistroSalida } from 'src/app/models/RegistroSalida';
+/** Variable de Entorno */
+import { environment } from 'src/environments/environment';
 
-const API_URL: string = 'http://152.200.130.126/gbackend/api/registroSalida/';
-// const API_URL: string = 'http://localhost:8090/api/registroSalida/';
+const API_URL: string = `${environment.API_URL}/registroSalida/`;
 
 @Injectable({
   providedIn: 'root',
