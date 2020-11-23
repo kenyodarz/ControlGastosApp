@@ -40,16 +40,16 @@
       <p-footer>
         <p-button
           icon="pi pi-file-pdf"
-          (click)="generarPDF()"
+          (click)="abrirPDF()"
           label="Generar PDF"
           *ngIf="selectedInforme"
         ></p-button>
-        <p-button
+        <!-- <p-button
           icon="pi pi-file-excel"
           (click)="exportExcel()"
           label="Generar Excel"
           *ngIf="selectedInforme"
-        ></p-button>
+        ></p-button> -->
       </p-footer>
     </p-panel>
     <br />
@@ -58,7 +58,7 @@
         <div class="col-12">
           <p-panel>
             <p-header>
-              <div style="text-align: center;">Relacion Gastos de Viaje</div>
+              <div style="text-align: center;">Vista Previa Relacion Gastos de Viaje</div>
             </p-header>
             <div class="row">
               <div

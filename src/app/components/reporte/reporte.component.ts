@@ -17,6 +17,8 @@ import { Informe } from 'src/app/models/Informe';
 import { Proyecto } from 'src/app/models/Proyecto';
 // Utilidades
 import * as html2pdf from 'html2pdf.js';
+// Enviroment variable
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-reporte',
@@ -52,6 +54,13 @@ export class ReporteComponent implements OnInit {
     private token: TokenStorageService
   ) {}
 
+  abrirPDF() {
+    let fileURL: string = null;
+    fileURL = `${environment.API_URL}/informe/pdf/${this.selectedInforme.idInforme}`;
+    window.open(fileURL);
+  }
+
+  /** Genera un pdf desde el HTML: En desuso */
   generarPDF() {
     let documento = document.getElementById('id');
     let opciones = {
@@ -91,6 +100,7 @@ export class ReporteComponent implements OnInit {
       })
       .save();
   }
+  /** Genera un excel desde la tabla de vista previa. En desuso */
   exportExcel() {
     import('xlsx').then((xlsx) => {
       const worksheet = xlsx.utils.table_to_sheet(
@@ -107,6 +117,7 @@ export class ReporteComponent implements OnInit {
       );
     });
   }
+  /** Genera un excel desde la tabla de vista previa. En desuso */
   saveAsExcelFile(buffer: any, fileName: string): void {
     import('file-saver').then((FileSaver) => {
       let EXCEL_TYPE =

@@ -209,7 +209,7 @@ export class InformeComponent implements OnInit {
     this.informe.credito = this.credito;
     this.informe.total = this.total;
     this.informe.proyecto = this.selectedProyecto;
-    console.log(this.informe);
+    // console.log(this.informe);
     this.guardarInforme();
     this.selectedUsuario = null;
   }
